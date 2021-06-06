@@ -50,8 +50,8 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
-        String appLang = sharedPreferences.getString("app_lang", "");
+        SharedPreferences sharedPreferences = getSharedPreferences(constants.APP_PREF, MODE_PRIVATE);
+        String appLang = sharedPreferences.getString(constants.APP_LANG, "");
         if(!appLang.equals(""))
             LocaleHelper.setLocale(this, appLang);
 
@@ -147,7 +147,7 @@ public class QuestionActivity extends AppCompatActivity {
             Toast.makeText(this, "اجابة خاطئه", Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(QuestionActivity.this, ANSWERActivity.class);
-            intent.putExtra("Question_answer", mCurrentDetail);
+            intent.putExtra("question_answer", mCurrentDetail);
             startActivity(intent);
         }
     }

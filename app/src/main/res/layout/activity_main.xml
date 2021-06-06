@@ -107,7 +107,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        android:background="@android:drawable/alert_dark_frame"
+        android:background="@drawable/button_true"
         android:onClick="onTrueClick"
         android:text="@string/true_text"
         android:textColor="@color/white"

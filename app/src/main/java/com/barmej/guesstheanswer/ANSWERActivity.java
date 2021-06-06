@@ -16,7 +16,7 @@ public class ANSWERActivity extends AppCompatActivity {
         setContentView(R.layout.activity_answer);
         mTextViewAnswer = findViewById(R.id.text_view_answer);
 
-        String answer = getIntent().getStringExtra("Question_answer");
+        String answer = getIntent().getStringExtra(constants.QUESTION_ANSWER);
         if (answer != null)
         mTextViewAnswer.setText(answer);
     }
